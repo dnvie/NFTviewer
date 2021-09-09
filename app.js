@@ -1,14 +1,13 @@
 var self, id, collection, image, elName, contract;
 var set = new Set();
 var array = [];
-const apiKey = process.env.API_KEY;
 
 function getData() {
     set.clear();
     document.querySelectorAll('.box').forEach(e => e.remove());
     self = document.getElementById("input").value.toLowerCase();
 
-    $.getJSON(`https://api.etherscan.io/api?module=account&action=tokennfttx&address=` + self + `&page=1&offset=10000&sort=asc&apikey=${apiKey}`, function(data) {
+    $.getJSON(`https://api.etherscan.io/api?module=account&action=tokennfttx&address=` + self + `&page=1&offset=10000&sort=asc&apikey=QPA4CY721X9JEVCMRDAZXUCV2P7BKITYFQ`, function(data) {
         console.log(data);
 
         if (data.message === "No transactions found") {
