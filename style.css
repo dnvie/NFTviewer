@@ -343,7 +343,7 @@ html::-webkit-scrollbar {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 160px;
+    width: 165px;
 }
 
 .details-id {
