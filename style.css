@@ -1,0 +1,475 @@
+:root {
+    --color1: #313131;
+    --color12: #036666;
+    --color2: #14746F;
+    --color3: #248277;
+    --color4: #358F80;
+    --color5: #469D89;
+    --color6: #56AB91;
+    --color7: #67B99A;
+    --color8: #78C6A3;
+    --tcolor1: #16161615;
+    --tcolor12: #03666620;
+    --tcolor2: #14746F20;
+    --tcolor3: #24827720;
+    --tcolor4: #358F8020;
+    --tcolor5: #469D8920;
+    --tcolor6: #56AB9120;
+    --tcolor7: #67B99A20;
+    --tcolor8: #78C6A320;
+}
+
+* {
+    transition: all 0.25s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(245, 245, 245);
+}
+
+header {
+    position: absolute;
+    height: 50px;
+    width: 630px;
+    left: 0;
+    right: 0;
+    top: 80px;
+    transform: scale(1.1);
+    margin: auto;
+    transition: all 0.35s;
+    animation-timing-function: cubic-bezier(.74, -0.01, .26, 1.04);
+}
+
+html::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(195, 195, 195);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(244, 244, 244);
+}
+
+#input {
+    left: 0;
+    width: 500px;
+    height: 50px;
+    border-radius: 13px;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 12px 19px #00000002;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+    font-family: 'Jost';
+    font-size: 14px;
+    font-weight: 500;
+    text-indent: 14px;
+}
+
+#input:hover {
+    box-shadow: 0px 12px 19px #00000012;
+    transition: all 0.15s ease-in-out;
+}
+
+#input:focus {
+    transform: scale(1.01);
+    box-shadow: 0px 12px 19px #00000012;
+    transition: all 0.15s ease-in-out;
+}
+
+::placeholder {
+    font-family: 'Jost';
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.35;
+    text-indent: 14px;
+}
+
+#button {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 100px;
+    border-radius: 13px;
+    border: none;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 0px 12px 19px #00000010;
+    font-family: 'Jost';
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(226, 226, 226);
+    transition: all 0.15s ease-in-out;
+}
+
+#button:hover {
+    transform: scale(1.0);
+    box-shadow: 0px 12px 19px #00000040;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.grid-container {
+    position: absolute;
+    top: 260px;
+    left: 0;
+    right: 0;
+    width: 1260px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px 220px;
+    grid-gap: 40px;
+}
+
+.box {
+    background: rgb(255, 255, 255);
+    height: 310px;
+    border-radius: 19px;
+    box-shadow: 0px 12px 19px #00000008;
+    transition: all 0.125s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 30px 40px #00000026;
+    transition: all 0.125s ease-in-out;
+    cursor: pointer;
+}
+
+.under {
+    opacity: 0.35;
+    filter: blur(5px) brightness(70%);
+    transition: all 0.15s ease-in-out;
+    user-select: none;
+    pointer-events: none;
+}
+
+.image {
+    position: relative;
+    height: 220px;
+    width: 220px;
+    background-repeat: no-repeat;
+    background-size: 220px 220px;
+    top: 0;
+    left: 0;
+    border-radius: 19px 19px 0 0;
+    transition: all 0.125s ease-in-out;
+}
+
+.info {
+    position: relative;
+    height: 90px;
+    width: 220px;
+    top: 0px;
+    left: 0px;
+    border-radius: 0 0 19px 19px;
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 30px;
+    color: rgb(43, 43, 43);
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.info p {
+    position: absolute;
+    height: 60px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding-left: 12px;
+}
+
+.id {
+    font-family: 'Jost';
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(85, 85, 85);
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
+.error {
+    position: absolute;
+    width: 520px;
+    height: 35px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(235, 33, 67);
+    box-shadow: 0px 12px 19px #00000010;
+    left: 0;
+    right: 0;
+    top: 20px;
+    font-family: 'Jost';
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 214, 214);
+    margin: auto;
+    text-align: center;
+    line-height: 35px;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+#error1.active {
+    top: 25px;
+    opacity: 1;
+    user-select: initial;
+    pointer-events: initial;
+}
+
+#error2.active {
+    top: 25px;
+    opacity: 1;
+    user-select: initial;
+    pointer-events: initial;
+}
+
+.details-container-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: none;
+    opacity: 0;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+}
+
+.details-container-wrapper.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.details-container {
+    position: fixed;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 700px;
+    height: 300px;
+    border-radius: 22px;
+    box-shadow: 0px 22px 39px #00000020;
+    background-color: rgb(236, 236, 236);
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
+    transform: scale(1.2);
+}
+
+.details-container.active {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 700px;
+    height: 300px;
+    border-radius: 22px;
+    box-shadow: 0px 0px 39px #00000050;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    user-select: initial;
+    pointer-events: initial;
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
+    transform: scale(1.2);
+}
+
+.details-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    border-radius: 22px 0 0 22px;
+}
+
+.details-info {
+    position: relative;
+    top: -300px;
+    left: 300px;
+    height: 60px;
+    width: 400px;
+    border-radius: 0 22px 0 0;
+    background-color: white;
+}
+
+#details-info-text {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    height: 60px;
+    width: 360px;
+    border-radius: 0 22px 0 0;
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+    text-align: left;
+    text-indent: 32px;
+    line-height: 85px;
+}
+
+.truncate2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 340px;
+}
+
+.details-id {
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(172, 172, 172);
+}
+
+.fa-external-link-alt {
+    position: absolute;
+    top: 33px;
+    right: 21px;
+    color: rgba(88, 88, 88, 0.25);
+    transition: all 0.125s ease-in-out;
+    z-index: 9;
+}
+
+.fa-external-link-alt:hover {
+    color: rgba(88, 88, 88, 1);
+    transition: all 0.125s ease-in-out;
+    cursor: pointer;
+}
+
+.details-grid-container {
+    position: relative;
+    top: -275px;
+    left: 325px;
+    right: 0;
+    width: 350px;
+    height: initial;
+    max-height: 200px;
+    display: grid;
+    grid-template-columns: 165px 165px;
+    grid-gap: 15px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 13px;
+}
+
+.details-box {
+    background-color: var(--tcolor1);
+    height: 35px;
+    border-radius: 14px;
+    transition: all 0.125s ease-in-out;
+    border: 0px solid rgb(209, 209, 209);
+    font-family: 'Jost';
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color1);
+    text-align: center;
+    line-height: 35px;
+}
+
+#svgLogo.active {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    margin: auto;
+    width: 150px;
+    height: auto;
+}
+
+#svgLogo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    height: auto;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+#svgLogo.active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    z-index: 2;
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+}
+
+#svgCircle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 35%;
+    height: auto;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+#svgCircle.active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.7;
+    transition: all 1s ease-out;
+    filter: blur(100px);
+    z-index: -1;
+}
