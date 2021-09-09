@@ -68,7 +68,7 @@ function getDetails(i) {
             traitsArray.push(data.attributes[i].value);
         };
         for (let i = 0; i < (traitsArray.length / 2); i++) {
-            $(".details-grid-container").append(`<div class="details-box">${traitsArray[i*2]}: ${traitsArray[(i*2)+1]}</div>`);
+            $(".details-grid-container").append(`<div class="details-box truncateTraits">${traitsArray[i*2]}: ${traitsArray[(i*2)+1]}</div>`);
         }
     });
     setTimeout(elevate, 150);
