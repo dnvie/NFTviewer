@@ -1,7 +1,7 @@
 var self, id, collection, image, elName, contract;
 var set = new Set();
 var array = [];
-const apiKey;
+const apiKey = process.env.API_KEY;
 
 function getData() {
     set.clear();
